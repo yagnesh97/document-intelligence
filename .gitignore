@@ -1,0 +1,65 @@
+# Python bytecode and compiled extensions
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging and build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Tests, coverage, and test-tool caches
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+
+# Downloaded PDF sample corpus
+tests/fixtures/pdf/sample-files/
+
+# Linting, formatting, type checking, and test environments
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.tox/
+.nox/
+
+# Local environment configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Celery runtime state
+celerybeat-schedule
+celerybeat-schedule.*
+
+# Runtime logs and temporary files
+*.log
+.tmp/
+*.tmp
+*.swp
+*.swo
+
+# IDE and editor metadata
+.idea/
+.vscode/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# License files
+minio.license

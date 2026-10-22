@@ -1,0 +1,44 @@
+[
+    {
+        "name": "gemini-primary",
+        "provider": "gemini",
+        "model": "gemini-3.8-flash",
+        "credential_ref": "GEMINI_API_KEY",
+        "reasoning_effort": null,
+        "temperature": null,
+        "max_tokens": 2000,
+        "top_p": null,
+        "enabled": true,
+        "display_name": "Gemini 3.8 Flash",
+        "description": "General-purpose model for reasoning and agent workflows.",
+        "capabilities": [
+            "chat",
+            "vision",
+            "function_calling",
+            "structured_output"
+        ],
+        "context_window": 1048576,
+        "max_output_tokens": 65536
+    },
+    {
+        "name": "openai-primary",
+        "provider": "openai",
+        "model": "gpt-4o-mini-2024-07-18",
+        "credential_ref": "OPENAI_API_KEY",
+        "reasoning_effort": null,
+        "temperature": 0.2,
+        "max_tokens": 2000,
+        "top_p": null,
+        "enabled": true,
+        "display_name": "GPT-4o mini",
+        "description": "Compact general-purpose model for efficient chat and structured responses.",
+        "capabilities": [
+            "chat",
+            "vision",
+            "function_calling",
+            "structured_output"
+        ],
+        "context_window": 128000,
+        "max_output_tokens": 16384
+    }
+]
