@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Smart Finance API",
+    title="Document Intelligence API",
     version="0.1.0",
     lifespan=lifespan,
 )

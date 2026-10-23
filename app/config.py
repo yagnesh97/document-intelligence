@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     # MongoDB
     mongodb_uri: str
-    mongodb_database: str = "smart_finance"
+    mongodb_database: str = "document_intelligence"
 
     # Qdrant
     qdrant_url: str = "http://localhost:6333"
@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     s3_access_key: str
     s3_secret_key: str
     s3_region: str = "us-west-1"
-    s3_bucket: str = "smart-finance-raw"
+    s3_bucket: str = "document-intelligence-raw"
 
     # Upload limits
     max_upload_files: int = 10

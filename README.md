@@ -1,8 +1,8 @@
-# Smart Finance
+# Document Intelligence
 
 ## Overview
 
-Smart Finance is a document-question-answering API for financial documents. It accepts common office, spreadsheet, image, and PDF formats; extracts their text; indexes paragraph-sized chunks with dense and sparse embeddings; and answers questions from retrieved document context. It is intended to make uploaded financial material searchable while returning the retrieved chunks used as sources.
+Document Intelligence is a document-question-answering API for financial documents. It accepts common office, spreadsheet, image, and PDF formats; extracts their text; indexes paragraph-sized chunks with dense and sparse embeddings; and answers questions from retrieved document context. It is intended to make uploaded financial material searchable while returning the retrieved chunks used as sources.
 
 The service exposes a FastAPI HTTP API, delegates extraction and indexing to a Celery worker, stores original uploads in S3-compatible object storage, keeps document records and chunks in MongoDB, and searches vectors in Qdrant.
 
@@ -69,8 +69,8 @@ Uploads return after the API has stored the source file and queued a task; parsi
 ## Installation and setup
 
 ```bash
-git clone <repository-url> smart-finance
-cd smart-finance
+git clone <repository-url> document-intelligence
+cd document-intelligence
 cp .env.example .env
 uv sync --all-groups
 ```
@@ -112,14 +112,14 @@ The authoritative settings are in [`app/config.py`](app/config.py). Pydantic rea
 | Group | Variable | Required | Default | Purpose |
 | --- | --- | --- | --- | --- |
 | MongoDB | `MONGODB_URI` | Yes | — | MongoDB connection URI. |
-| MongoDB | `MONGODB_DATABASE` | No | `smart_finance` | Database for document, chunk, and LLM-model collections. |
+| MongoDB | `MONGODB_DATABASE` | No | `document_intelligence` | Database for document, chunk, and LLM-model collections. |
 | Qdrant | `QDRANT_URL` | No | `http://localhost:6333` | Qdrant server URL. |
 | Qdrant | `QDRANT_COLLECTION` | No | `document_chunks` | Hybrid vector collection name. |
 | S3 | `S3_ENDPOINT` | No | `http://localhost:9000` | S3-compatible endpoint URL. |
 | S3 | `S3_ACCESS_KEY` | Yes | — | Object-store access key. |
 | S3 | `S3_SECRET_KEY` | Yes | — | Object-store secret key. |
 | S3 | `S3_REGION` | No | `us-west-1` | Region supplied to the S3 client. |
-| S3 | `S3_BUCKET` | No | `smart-finance-raw` | Existing bucket used for raw uploads. |
+| S3 | `S3_BUCKET` | No | `document-intelligence-raw` | Existing bucket used for raw uploads. |
 | Uploads | `MAX_UPLOAD_FILES` | No | `10` | Maximum files in one request. |
 | Uploads | `MAX_FILE_SIZE` | No | `26214400` (25 MiB) | Maximum size of one uploaded file, in bytes. |
 | Uploads | `MAX_TOTAL_UPLOAD_SIZE` | No | `104857600` (100 MiB) | Maximum combined request size, in bytes. |

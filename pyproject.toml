@@ -1,7 +1,7 @@
 [project]
-name = "smart-finance"
+name = "document-intelligence"
 version = "0.1.0"
-description = "Add your description here"
+description = "Document Intelligence is a FastAPI service for ingesting financial documents, extracting text with OCR, indexing content for hybrid search, and answering questions using RAG."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [

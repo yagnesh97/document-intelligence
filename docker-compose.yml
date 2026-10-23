@@ -37,7 +37,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
-      MONGO_INITDB_DATABASE: smart_finance
+      MONGO_INITDB_DATABASE: document_intelligence
     volumes:
       - mongodb_data:/data/db
     restart: unless-stopped
